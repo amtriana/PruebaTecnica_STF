@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "fb1bec95-e470-4fef-92cb-1991c05a86d1",
+		"name": "Prueba Técnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Query Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qastudiof.myvtex.com/api/catalog_system/pub/products/search",
+					"protocol": "https",
+					"host": [
+						"qastudiof",
+						"myvtex",
+						"com"
+					],
+					"path": [
+						"api",
+						"catalog_system",
+						"pub",
+						"products",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qastudiof.myvtex.com/api/catalog_system/pub/category/tree/3/",
+					"protocol": "https",
+					"host": [
+						"qastudiof",
+						"myvtex",
+						"com"
+					],
+					"path": [
+						"api",
+						"catalog_system",
+						"pub",
+						"category",
+						"tree",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<PruebaTecnica_Punto1.Models.QueryProducts>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FormularioVisita</title>
+</head>
+<body>
+    <div>
+        <form method="post" action="/Home/FormularioConsulta">
+            <p>Id Producto:<input type="text" name="_productId" /></p>
+            <p>Nombre Producto:<input type="text" name="_productName" /></p>
+            <p>Id Categoria:<input type="text" name="_categoryId" /></p>
+            <p><input type="submit" value="Consultar" /></p>
+        </form>
+    </div>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Brand)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Brand)
+        </td>        
+    </tr>
+        }
+
+    </table>
+</body>
+</html>
